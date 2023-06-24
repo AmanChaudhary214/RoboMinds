@@ -13,26 +13,16 @@
 
 
 ## ![Home Section](https://img.shields.io/badge/home_section-%231572B6.svg?style=for-the-badge)
-![image](https://github.com/AmanChaudhary214/AmanChaudhary214.github.io/blob/master/screenshot-images/Portfolio-Dark.png)
+![image](https://github.com/AmanChaudhary214/RoboMinds/blob/main/home.png)
 
-## ![About Section](https://img.shields.io/badge/about_section-%231572B6.svg?style=for-the-badge)
-![image](https://github.com/AmanChaudhary214/AmanChaudhary214.github.io/blob/master/screenshot-images/about-dark.png)
+## ![Services Section](https://img.shields.io/badge/services_section-%231572B6.svg?style=for-the-badge)
+![image](https://github.com/AmanChaudhary214/RoboMinds/blob/main/services.png)
 
-## ![Skills Section](https://img.shields.io/badge/skills_section-%231572B6.svg?style=for-the-badge)
-![image](https://github.com/AmanChaudhary214/AmanChaudhary214.github.io/blob/master/screenshot-images/skiils-dark.png)
+## ![About Us](https://img.shields.io/badge/about_us-%231572B6.svg?style=for-the-badge)
+![image](https://github.com/AmanChaudhary214/RoboMinds/blob/main/aboutUs.png)
 
-## ![Project Section](https://img.shields.io/badge/project_section-%231572B6.svg?style=for-the-badge)
-![image](https://github.com/AmanChaudhary214/AmanChaudhary214.github.io/blob/master/screenshot-images/projects-dark.png)
+## ![Team](https://img.shields.io/badge/Our_team-%231572B6.svg?style=for-the-badge)
+![image](https://github.com/AmanChaudhary214/RoboMinds/blob/main/team.png)
 
-## ![Statistics Section](https://img.shields.io/badge/statistics_section-%231572B6.svg?style=for-the-badge)
-![image](https://github.com/AmanChaudhary214/AmanChaudhary214.github.io/blob/master/screenshot-images/statistics-dark.png)
-
-## ![Contact Section](https://img.shields.io/badge/contact_section-%231572B6.svg?style=for-the-badge)
-![image](https://github.com/AmanChaudhary214/AmanChaudhary214.github.io/blob/master/screenshot-images/contact-dark.png)
-
-## ![Footer Section](https://img.shields.io/badge/footer_section-%231572B6.svg?style=for-the-badge)
-![image](https://github.com/AmanChaudhary214/AmanChaudhary214.github.io/blob/master/screenshot-images/footer-dark.png)
-
-
-
-Thanks [Ionică Bizău](https://github.com/IonicaBizau) for GitHub calendar.
+## ![Tech Stack](https://img.shields.io/badge/tech_stack-%231572B6.svg?style=for-the-badge)
+![image](https://github.com/AmanChaudhary214/RoboMinds/blob/main/tech_stack.png)
