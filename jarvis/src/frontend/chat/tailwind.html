@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Speech-to-Text App</title>
+    <link href="https://cdn.tailwindcss.com/2.2.17/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-black">
+
+<div id="king" class="container mx-auto">
+    <div id="Bigcontainer">
+        <h1 id="topic" class="text-center text-white mb-8">Full Stack Interview App</h1>
+
+        <div class="question mb-8">
+            <h2 class="text-white">Question:</h2>
+            <p id="questionText" class="text-white"></p>
+        </div>
+
+        <div class="answer-container">
+            <div class="answer w-full md:w-1/2 mb-8">
+                <h2 class="text-white">Your Answer:</h2>
+                <textarea id="answerText" rows="4" cols="50" disabled class="bg-gray-700 text-white w-full p-4 rounded resize-none"></textarea>
+                <br />
+                <button id="recordBtn" class="btn bg-red-500 text-white">Start Recording</button>
+            </div>
+
+            <div class="answer w-full md:w-1/2 mb-8">
+                <h2 class="text-white">Correct Answer:</h2>
+                <p id="improvisedText" class="text-white"></p>
+                <button id="improveBtn" class="btn" disabled>Improve Sentence</button>
+            </div>
+        </div>
+
+        <button id="nextBtn" class="btn" disabled>Next Question</button>
+    </div>
+</div>
+
+<script>
+    // JavaScript code
+</script>
+
+</body>
+</html>
+
+
+    <script>
+      window.addEventListener("load", test);
+
+      function test() {
+        console.log("working");
+        const questionsArray = [
+          "What are keys in React?",
+          "What is memoisation in React?",
+          "What is the difference between React.memo and React.useMemo?",
+          "What are the parameters that React.memo takes?",
+          "What are the different ways to apply useEffect?",
+          "How does Routing work with React?",
+          "What is SSR and CSR?",
+          "What are the lifecycle methods in class components?",
+          "What are dependencies in useEffect?",
+          "What is a pure component?",
+          "What is useCallback?",
+          "What are useRef? What are some use cases?",
+          "What are callback refs?",
+          "How does Context API work? What does it solve?",
+          "What does useReducer do?",
+          "When do you use useReducer vs useState?",
+          "How do you use Profiler?",
+          "Can you create a tree structure and explain how the state management will be designed for a game like tic-tac-toe?",
+          "What is a dispatcher?",
+          "What is Flux architecture?",
+          "What is Redux?",
+          "Can you create your own Redux and explain all the different entities?",
+          "What are reducers?",
+          "What are actions?",
+          "What are side effects?",
+          "What does a store do?",
+          "What are combineReducers?",
+          "What are thunks? Why do you need them?",
+          "Write how you would write an API request in Redux thunks?",
+          "What does lazy loading mean?",
+          "What does Webpack do?",
+          "What does Babel do?",
+          "Can you write React without JSX?",
+          "What is Redux?",
+          "What are actions?",
+          "What are action creators?",
+          "What are dispatchers?",
+          "What are reducers?",
+          "What are pure functions?",
+          "Why do we spread the state or return a new object in reducers?",
+          "Why do dispatchers take only actions which are objects?",
+          "What are types in actions? Why do we need them?",
+          "What happens when you pass a function into a dispatcher?",
+          "Where do dispatchers come from?",
+          "What are the properties of a store?",
+          "Can you create your own Redux and create the following methods? dispatchers, constructor, getState, subscribe",
+          "Explain Redux to a 5-year-old.",
+          "What is the difference between Context API and Redux?",
+          "What are Redux thunks?",
+          "Why do we need to use network requests in Redux thunks?",
+          "What are middlewares?",
+          "Can you write your own middleware instead of thunks? What do thunks do?",
+          "Explain with a diagram how state gets updated with Redux.",
+          "What is useSelector?",
+          "What is the compareFn that you pass in useSelector?",
+          "What is useDispatch?",
+          "What is the use of Provider?",
+          "What is Redux Toolkit? How does it make Redux better?",
+          "What are different frameworks for client-side rendering?",
+          "What are different frameworks for server-side rendering?",
+          "How does the internet work?",
+          "Give an example of how event bubbling causes an issue in a web application and how you can solve it.",
+          "What is callback hell?",
+          "What is XHR / AJAX?",
+          "What is an API?",
+          "What are Browser APIs?",
+          "Explain what setInterval and setTimeout are. How do they work?",
+          "Is JavaScript single-threaded?",
+          "How does JavaScript handle asynchronous behavior?",
+          "What is the event loop?",
+          "Explain the event loop visually with the help of a call stack, task queue, and heap.",
+          "What is the heap? Show it on the web browser where the heap is.",
+          "What is a call stack?",
+          "What is stack overflow (not the website)?",
+          "What are promises?",
+          "Write a function called sleep that accepts the time in milliseconds and returns a promise that will resolve after the specified amount of time. If the input is not a valid number, then reject the promise.",
+          "What is async/await? How is it different from promises?",
+          "How does fetch work? How is it different from axios?",
+          "What are the advantages of using promises? What issue does it solve?",
+          "What is CORS?",
+          "What is IIFE? Why was that pattern used?",
+          "What are anonymous functions?",
+          "What are Sets?",
+          "What are Maps? How are Maps different from objects?",
+          "What is ES Modules? What is CommonJS?",
+          "Explain the difference between localStorage, sessionStorage, and cookies.",
+          "What is ECMAScript? What is TC-39?",
+          "What is polyfilling? Why do we need to do that?",
+          "Explain HTTP Protocols.",
+          "What is TCP?",
+          "Explain the Client-Server Model.",
+          "What are the OSI layers?",
+          "What is a REST API?",
+          "What is GraphQL? How is it different from a REST API?",
+          "What is Webpack? What is Snowpack?",
+          "What is tree shaking?",
+          "What is Hot Module Reloading?",
+          "What is the prototype chain?",
+          "How are concepts of inheritance applied in JavaScript?",
+          "What are classes in JavaScript? How are they different from the prototype chain?",
+          "Can you implement the following using the prototype chain and classes?",
+          "What are generators? What does yield do?",
+          "Show an application of generators as an alternative to async/await.",
+          "What are call, apply, and bind? Give an example where you have to use bind?",
+          "Create an array with the name `questionsArray`.",
+        ];
+
+        let num = [Math.floor(Math.random() * questionsArray.length)];
+        console.log(questionsArray[num]);
+
+        const payload = questionsArray[num];
+        let finalizedata;
+        fetch("http://localhost:8000/chat", {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+          },
+          body: JSON.stringify({ payload }),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            finalizedata = data.ans.slice(2);
+            console.log(data.ans.slice(2));
+          })
+          .catch((err) => {
+            return err.message;
+          });
+        // console.log(questionsArray[num]);
+        const questionText = document.getElementById("questionText");
+        const answerText = document.getElementById("answerText");
+        const improveBtn = document.getElementById("improveBtn");
+        const improvisedText = document.getElementById("improvisedText");
+        const recordBtn = document.getElementById("recordBtn");
+        const nextBtn = document.getElementById("nextBtn");
+
+        let currentQuestionIndex = 0;
+        let recognition;
+
+        function getRandomQuestion() {
+          let wow = questionsArray[num];
+          // console.log("wow",wow)
+          return wow;
+        }
+
+        function askQuestion() {
+          const question = getRandomQuestion();
+          // console.log(question);
+          questionText.textContent = question;
+          answerText.value = "";
+          nextBtn.disabled = true;
+
+          // Initialize SpeechRecognition API
+          recognition =
+            new webkitSpeechRecognition() || new SpeechRecognition();
+          recognition.continuous = true;
+
+          recognition.onresult = function (event) {
+            const result =
+              event.results[event.results.length - 1][0].transcript;
+            answerText.value = result;
+            improveBtn.disabled = false;
+            nextBtn.disabled = false;
+          };
+
+          recordBtn.addEventListener("click", toggleRecording);
+        }
+
+        function toggleRecording() {
+        //   if (recordBtn.textContent === "Start Recording") {
+        //     recordBtn.textContent = "Stop Recording";
+        //     recordBtn.style.backgroundColor = "red";
+        //     recordBtn.style.color = "white";
+
+        //     recognition.start();
+        //   } else {
+        //     recordBtn.textContent = "Start Recording";
+        //     recognition.stop();
+        //   }
+
+          if (recordBtn.textContent === "Start Recording") {
+        recordBtn.textContent = "Stop Recording";
+        recordBtn.style.backgroundColor = "red";
+        recordBtn.style.color = "white";
+        recognition.start();
+    } else {
+        // Handle the logic for when the button is clicked again (Stop Recording behavior)
+        // For example, you can reset the button styles and stop the recognition
+        recordBtn.textContent = "Start Recording";
+        recordBtn.style.backgroundColor = "green";
+        recordBtn.style.color = "#fff";
+        recognition.stop();
+    }
+        }
+
+        function improveSentence() {
+          const sentence = finalizedata;
+          // Apply any improvements or corrections to the sentence
+          const improvedSentence = correctSentence(sentence);
+          improvisedText.textContent = improvedSentence;
+          improveBtn.disabled=true;
+        }
+
+        function correctSentence(sentence) {
+          // Perform any necessary sentence correction or improvement here
+          // For example, you can use a grammar correction library or rules
+
+          // In this example, let's simply capitalize the first letter of the sentence
+          return sentence.charAt(0).toUpperCase() + sentence.slice(1);
+        }
+
+        function nextQuestion() {
+          window.location.reload();
+        }
+
+        improveBtn.addEventListener("click", improveSentence);
+        nextBtn.addEventListener("click", nextQuestion);
+
+        askQuestion();
+      }
+    </script>
+
+
+
+<style>
+
+
+
+  body {
+
+background-color: black;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+ 
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.answer {
+  margin-bottom: 20px;
+}
+
+.improvised {
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+
+  background-color: #333;
+  color: #fff;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.answer {
+  margin-bottom: 20px;
+}
+
+.improvised {
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: orange;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+textarea {
+  background-color: #555;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  resize: none;
+}
+
+textarea:disabled {
+  background-color: #777;
+  cursor: not-allowed;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+
+  background-color: #333;
+  color: #fff;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.answer {
+  margin-bottom: 20px;
+}
+
+.improvised {
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: orange;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: orange;
+}
+
+.btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+textarea {
+  background-color: #555;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  resize: none;
+}
+
+textarea:disabled {
+  background-color: #777;
+  cursor: not-allowed;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+
+  background-color: #333;
+  color: #fff;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.answer {
+  margin-bottom: 20px;
+}
+
+.improvised {
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: orange;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+  background-color: rgb(26, 221, 16);
+  color: white;
+  font-weight: bold;
+}
+
+.btn:hover span {
+  font-weight: bold;
+}
+
+.btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+textarea {
+  background-color: #555;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  resize: none;
+}
+
+textarea:disabled {
+  background-color: #777;
+  cursor: not-allowed;
+}
+
+.container {
+width: 70%;
+margin: 0 auto;
+background-color: black;
+border: 5px solid white;
+border-radius: 20px;
+padding:20px;
+margin-top: 55px;
+}
+
+.answer-container {
+display: flex;
+flex-wrap: wrap;
+}
+
+.answer {
+flex: 1 0 50%; /* Adjust the width as needed */
+margin-bottom: 20px;
+}
+
+body {
+
+background-color: black;
+background-image: url('./img/3d-abstract-space-sky-with-stars-nebula.jpg');
+}
+
+#topic{
+text-align: center;
+}
+
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+background-color: black;
+background-image: url('./img/3d-abstract-space-sky-with-stars-nebula.jpg');
+color: #fff;
+}
+
+.container {
+width: 70%;
+margin: 0 auto;
+background-color: black;
+border: 5px solid white;
+border-radius: 20px;
+padding: 20px;
+margin-top: 55px;
+}
+
+#topic {
+text-align: center;
+}
+
+h1 {
+margin-bottom: 20px;
+}
+
+.question,
+.answer,
+.improvised {
+margin-bottom: 20px;
+}
+
+.btn {
+background-color: orange;
+color: #fff;
+border: none;
+padding: 10px 20px;
+border-radius: 4px;
+cursor: pointer;
+transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+background-color: rgb(26, 221, 16);
+color: white;
+font-weight: bold;
+}
+
+.btn:hover span {
+font-weight: bold;
+}
+
+.btn:disabled {
+background-color: #ccc;
+cursor: not-allowed;
+}
+
+textarea {
+background-color: #555;
+color: #fff;
+border: none;
+padding: 10px;
+border-radius: 4px;
+resize: none;
+}
+
+textarea:disabled {
+background-color: #777;
+cursor: not-allowed;
+}
+
+.answer-container {
+display: flex;
+flex-wrap: wrap;
+}
+
+.answer {
+flex: 1 0 50%;
+margin-bottom: 20px;
+}
+
+
+
+</style>
