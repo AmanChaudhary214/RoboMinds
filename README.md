@@ -13,7 +13,7 @@
 
 
 ## ![Home Section](https://img.shields.io/badge/home_section-%231572B6.svg?style=for-the-badge)
-![image](https://github.com/AmanChaudhary214/RoboMinds/blob/main/home.png)
+![image](https://postimg.cc/p5tz7ybx)
 
 ## ![Services Section](https://img.shields.io/badge/services_section-%231572B6.svg?style=for-the-badge)
 ![image](https://github.com/AmanChaudhary214/RoboMinds/blob/main/services.png)
