@@ -8,7 +8,7 @@
 
 <p align=center >The best way to prepare for the interviews. Period.</p>
 <p align=center>
-    <a href="" target="blank">Visit ChatBot</a>
+    <a href="https://robominds.netlify.app/" target="blank">Visit ChatBot</a>
 </p>
 
 
