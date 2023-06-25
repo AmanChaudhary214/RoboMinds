@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Login</title>
+    <link href="https://cdn.tailwindcss.com/your-version/tailwind.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    
+    <div class="l-form">
+        <div class="shape1"></div>
+        <div class="shape2"></div>
+
+        <div class="form">
+            <img src="./Login.svg" alt="" class="form_img">
+
+            <form action="" class="form_content">
+                <h1 class="form_title">Welcome</h1>
+
+                <div class="form_div form_div_one">
+                    <div class="form_icon">
+                        <i class='bx bx-user-circle'></i>
+                    </div>
+                    <div class="form_div-input">
+                        <label for="" class="form_label">Email</label>
+                        <input type="text" class="form_input" id="email">
+                    </div>
+                </div>
+
+                <div class="form_div">
+                    <div class="form_icon">
+                        <i class='bx bx-lock-open' ></i>
+                    </div>
+                    <div class="form_div-input">
+                        <label for="" class="form_label">Password</label>
+                        <input type="password" class="form_input" id="password">
+                    </div>
+                </div>
+
+                <a href="#" class="form_forgot">Forgot Password?</a>
+                <a href="../register/customer_register.html" class="form_register">New user? Register now.</a>
+
+                <input type="submit" class="form_button" value="Login">
+
+                <div class="form_social"><span class="form_social-text">or Login with</span>
+                    <a href="#" class="form_social-icon"><i class='bx bxl-google'></i></a>
+                    <a href="#" class="form_social-icon"><i class='bx bxl-facebook' ></i></a>
+                    <a href="#" class="form_social-icon"><i class='bx bxl-twitter' ></i></a>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+    
+      
+    <script src="./login.js"></script>
+
+</body>
+</html>
