@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-size: cover;
+  color: #8590ad;
+}
+
+header,
+nav,
+main,
+footer {
+  padding: 20px;
+}
+
+nav {
+  background-color: black;
+}
+
+.nav-content {
+  height: 68px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+.logo {
+  flex: 1;
+  height: 100%;
+}
+
+.nav-button {
+  background-color: #e9ab49;
+  border: none;
+  color: black;
+  padding: 7px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 50px;
+  cursor: pointer;
+  border-radius: 7px;
+  border: 2px solid #e9ab49;
+}
+
+.nav-button:hover {
+  background-color: transparent;
+  color: #a2a5ac;
+}
+
+.logo {
+  height: 100px;
+}
+
+h1 {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.top {
+  width: 75%;
+  margin: 75px auto 75px;
+  text-align: center;
+}
+
+.top>p {
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  word-spacing: 2px;
+}
+
+.tech_stack {
+  width: 60%;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.grid {
+  margin: auto;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.grid>div>img {
+  height: 100px;
+}
+
+.team {
+  width: 65%;
+  margin: auto;
+}
+
+.team_grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+
+.member {
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border-radius: 10px;
+  padding: 50px 25px 25px;
+}
+
+.member>img {
+  width: 200px;
+  border-radius: 10px;
+}
+
+.member:hover {
+  transform: scale(1.05);
+}
+
+.member>p {
+  color: #8590ad;
+}
+
+.name,
+.icon {
+  color: black;
+  font-size: 18px;
+}
+
+#footer {
+  margin: auto;
+  width: 90%;
+  height: 55px;
+  border-top: 0.25px solid lightgray;
+  border-bottom: 0.25px solid lightgray;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#footer>img {
+  height: 75%;
+  margin: auto;
+}
+
+#footer>svg {
+  height: 50%;
+  margin: auto;
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#footer>svg:hover {
+  transform: scale(1.1);
+}
+
+body>p {
+  text-align: center;
+}
