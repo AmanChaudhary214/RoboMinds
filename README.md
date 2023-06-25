@@ -16,13 +16,19 @@
 ![image](https://i.postimg.cc/2y1G1B0q/Screenshot-214.png)
 
 ## ![Services Section](https://img.shields.io/badge/services_section-%231572B6.svg?style=for-the-badge)
-![image](https://github.com/AmanChaudhary214/RoboMinds/blob/main/services.png)
-
-## ![About Us](https://img.shields.io/badge/about_us-%231572B6.svg?style=for-the-badge)
-![image](https://github.com/AmanChaudhary214/RoboMinds/blob/main/aboutUs.png)
+![image](https://i.postimg.cc/sxbc7DLT/Screenshot-215.png)
 
 ## ![Team](https://img.shields.io/badge/Our_team-%231572B6.svg?style=for-the-badge)
-![image](https://github.com/AmanChaudhary214/RoboMinds/blob/main/team.png)
+![image](https://i.postimg.cc/fT05Zm3p/Screenshot-217.png)
 
 ## ![Tech Stack](https://img.shields.io/badge/tech_stack-%231572B6.svg?style=for-the-badge)
-![image](https://github.com/AmanChaudhary214/RoboMinds/blob/main/tech_stack.png)
+![image](https://i.postimg.cc/gkwtJ17M/Screenshot-218.png)
+
+## ![Login Page](https://img.shields.io/badge/login_page-%231572B6.svg?style=for-the-badge)
+![image](https://i.postimg.cc/QMq0wDBM/Screenshot-219.png)
+
+## ![Dashboard](https://img.shields.io/badge/dashboard-%231572B6.svg?style=for-the-badge)
+![image](https://i.postimg.cc/wqHrVftv/Screenshot-220.png)
+
+## ![Tech Stack](https://img.shields.io/badge/ChatBot-UI-%231572B6.svg?style=for-the-badge)
+![image](https://i.postimg.cc/mDRK1V9P/Screenshot-221.png)
